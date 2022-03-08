@@ -16,7 +16,7 @@ public class Sketch extends PApplet {
 
   // current date and time
   fill(0, 0, 0);
-  textSize(16);
+  textSize(20);
   text(day() + "/" + month() + "/" + year() + "  " + (hour() + ":" + minute() + ":" + second()), 20, 30);
 
 
