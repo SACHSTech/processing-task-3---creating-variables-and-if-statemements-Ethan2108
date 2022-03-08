@@ -20,9 +20,12 @@ public class Sketch extends PApplet {
   textSize(20);
   text(day() + "/" + month() + "/" + year() + "  " + (hour() + ":" + minute() + ":" + second()), 20, 30);
 
-  // random sun dimensions
-  float sunX = random(0, 500);
-  float sunY = random(0, 500);
+  // Sun
+  fill(246, 255, 0);
+  float sunX = random(0, height);
+  float sunY = random(0, width);
+  float sunDiameter = random(100, 200);
+  ellipse(sunX, sunY, sunDiameter, sunDiameter);
 
   // variables for the position of the sun
   boolean sunLeft = sunX >= 250;
@@ -43,19 +46,16 @@ public class Sketch extends PApplet {
     background(209, 101, 0);
   }
   if (sunBottomLeft) {
-    background(0, 100, 150);
+    background(102, 102, 102);
   }
   if (sunBottomRight) {
-    background(100, 0, 200);}
+    background(71, 64, 57);}
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	// Sun
-  fill(246, 255, 0);
-  ellipse(460, 50, 150, 150);
 
   // House
   fill(0, 0, 0);
