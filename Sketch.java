@@ -12,7 +12,7 @@ public class Sketch extends PApplet {
   }
 
   public void setup() {
-  // Blue background
+  
     background(0, 255, 255);
 
   // current date and time
