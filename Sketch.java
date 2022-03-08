@@ -12,6 +12,7 @@ public class Sketch extends PApplet {
   }
 
   public void setup() {
+  // Blue background
     background(0, 255, 255);
 
   // current date and time
@@ -57,6 +58,9 @@ public class Sketch extends PApplet {
   // Roof
   fill(44, 101, 156);
   triangle(80, 240, 250, 140, 380, 240);
+
+  // House
+  house(randomX);
 
 
 
