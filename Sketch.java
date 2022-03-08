@@ -23,20 +23,30 @@ public class Sketch extends PApplet {
   // random sun dimensions
   float sunX = random(0, 500);
   float sunY = random(0, 500);
-  float sunSize = random(50, 100);
-  float sunDistance = sunSize / 2; 
 
   // variables for the position of the sun
-  boolean sunleft = sunX >= 250;
-  boolean sunright = sunX <= 249;
-  boolean sunup = sunY <= 250; 
-  boolean sundown = sunY >=249;
+  boolean sunLeft = sunX >= 250;
+  boolean sunRight = sunX <= 249;
+  boolean sunUp = sunY <= 250; 
+  boolean sunDown = sunY >=249;
 
-  boolean suntopleft = sunup && sunleft;
-  boolean suntopright = sunup && sunright;
-  boolean sunbottomleft = sundown && sunleft;
-  boolean sunbottomright = sundown && sunright;
-  boolean sunheight = suntopleft || suntopright;
+  boolean sunTopLeft = sunUp && sunLeft;
+  boolean sunTopRight = sunUp && sunRight;
+  boolean sunBottomLeft = sunDown && sunLeft;
+  boolean sunBottomRight = sunDown && sunRight;
+
+  // if statements to set background colour 
+  if (sunTopLeft) {
+    background(0, 255, 255);
+  }
+  if (sunTopRight) {
+    background(209, 101, 0);
+  }
+  if (sunBottomLeft) {
+    background(0, 100, 150);
+  }
+  if (sunBottomRight) {
+    background(100, 0, 200);}
   }
 
   /**
