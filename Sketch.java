@@ -13,6 +13,13 @@ public class Sketch extends PApplet {
 
   public void setup() {
     background(0, 255, 255);
+
+  // current date and time
+  fill(0, 0, 0);
+  textSize(16);
+  text(day() + "/" + month() + "/" + year() + "  " + (hour() + ":" + minute() + ":" + second()), 20, 30);
+
+
   }
 
   /**
