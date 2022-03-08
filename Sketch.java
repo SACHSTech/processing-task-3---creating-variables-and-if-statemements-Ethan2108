@@ -12,7 +12,7 @@ public class Sketch extends PApplet {
   }
 
   public void setup() {
-  
+  // Blue background
     background(0, 255, 255);
 
   // current date and time
@@ -20,19 +20,34 @@ public class Sketch extends PApplet {
   textSize(20);
   text(day() + "/" + month() + "/" + year() + "  " + (hour() + ":" + minute() + ":" + second()), 20, 30);
 
-  //Sun
-  fill(246, 255, 0);
-  ellipse(460, 50, 150, 150);
+  // random sun dimensions
+  float sunX = random(0, 500);
+  float sunY = random(0, 500);
+  float sunSize = random(50, 100);
+  float sunDistance = sunSize / 2; 
 
+  // variables for the position of the sun
+  boolean sunleft = sunX >= 250;
+  boolean sunright = sunX <= 249;
+  boolean sunup = sunY <= 250; 
+  boolean sundown = sunY >=249;
 
+  boolean suntopleft = sunup && sunleft;
+  boolean suntopright = sunup && sunright;
+  boolean sunbottomleft = sundown && sunleft;
+  boolean sunbottomright = sundown && sunright;
+  boolean sunheight = suntopleft || suntopright;
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	
-  // House Building
+	// Sun
+  fill(246, 255, 0);
+  ellipse(460, 50, 150, 150);
+
+  // House
   fill(0, 0, 0);
   rect(120, 240, 220, 220);
   
@@ -59,6 +74,7 @@ public class Sketch extends PApplet {
   // Roof
   fill(44, 101, 156);
   triangle(80, 240, 250, 140, 380, 240);
+
 
 
 
