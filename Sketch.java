@@ -15,11 +15,6 @@ public class Sketch extends PApplet {
   // Blue background
     background(0, 255, 255);
 
-  // current date and time
-  fill(0, 0, 0);
-  textSize(20);
-  text(day() + "/" + month() + "/" + year() + "  " + (hour() + ":" + minute() + ":" + second()), 20, 30);
-
   // Sun
   fill(246, 255, 0);
   float sunX = random(0, height);
@@ -50,6 +45,11 @@ public class Sketch extends PApplet {
   }
   if (sunBottomRight) {
     background(71, 64, 57);}
+
+  // current date and time
+  fill(0, 0, 0);
+  textSize(20);
+  text(day() + "/" + month() + "/" + year() + "  " + (hour() + ":" + minute() + ":" + second()), 20, 30);
   }
 
   /**
