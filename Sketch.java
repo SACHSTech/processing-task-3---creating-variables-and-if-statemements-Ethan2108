@@ -20,6 +20,10 @@ public class Sketch extends PApplet {
   textSize(20);
   text(day() + "/" + month() + "/" + year() + "  " + (hour() + ":" + minute() + ":" + second()), 20, 30);
 
+  //Sun
+  fill(246, 255, 0);
+  ellipse(460, 50, 150, 150);
+
 
   }
 
@@ -27,11 +31,8 @@ public class Sketch extends PApplet {
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	//Sun
-  fill(246, 255, 0);
-  ellipse(460, 50, 150, 150);
-
-  // House
+	
+  // House Building
   fill(0, 0, 0);
   rect(120, 240, 220, 220);
   
@@ -58,10 +59,6 @@ public class Sketch extends PApplet {
   // Roof
   fill(44, 101, 156);
   triangle(80, 240, 250, 140, 380, 240);
-
-  // House
-  house(randomX);
-
 
 
 
